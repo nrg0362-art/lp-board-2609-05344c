@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>다이렉트 가입 | 소노아임레디 소노라이프420</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#F2F4F6">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<meta name="description" content="소노라이프420 다이렉트 가입 화면. 토스 회원 전용.">
+<link rel="preload" href="assets/fonts/font-r.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/font-b.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./direct.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5 8 12l7 7"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-ck" viewBox="0 0 24 24"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></symbol>
+<symbol id="i-dn" viewBox="0 0 12 12"><path d="M2.5 4.5 6 8l3.5-3.5"/></symbol>
+<symbol id="i-rt" viewBox="0 0 12 12"><path d="M4.5 2.5 8 6l-3.5 3.5"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="i-arw" viewBox="0 0 24 24"><path d="M12 4.5v15M5.5 13 12 19.5 18.5 13"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.5 12 4.5l8 7V20h-5.5v-6h-5v6H4z"/></symbol>
+<symbol id="i-cert" viewBox="0 0 24 24"><path d="M12 2.5 4.5 5.6v5.2c0 4.9 3.2 9.2 7.5 10.7 4.3-1.5 7.5-5.8 7.5-10.7V5.6L12 2.5zm-1.3 13.6-3.2-3.2 1.5-1.5 1.7 1.7 4.4-4.4 1.5 1.5-5.9 5.9z"/></symbol>
+</defs></svg>
+
+<div class="app" id="app">
+
+  <header class="hd">
+    <button class="ico" id="btnBack" aria-label="뒤로"><svg><use href="#i-back"/></svg></button>
+    <img class="mark" src="assets/bi_mark.png" alt="소노아임레디">
+    <span class="tt">다이렉트 가입</span>
+  </header>
+
+  <div class="pg" id="pg">
+    <span class="num" id="pgNum">1<svg><use href="#i-ck"/></svg></span>
+    <span class="lab" id="pgLab">본인인증</span>
+    <span class="dots" id="pgDots"><i></i><i></i><i></i><i></i></span>
+    <span class="tot">4</span>
+    <div class="bub" id="sobokBub"><span class="tx" id="sobokTx">안녕하세요, 소복이예요.</span></div>
+    <button class="sobok-btn" id="sobokBtn" aria-label="소복이 도움 · 자주 묻는 질문"><img id="sobokImg" src="assets/sobok/25_sobok_headset.png?v=50" alt=""><i class="q">?</i><i class="cap">도움말</i></button>
+  </div>
+
+  <main class="main" id="main">
+
+    <section class="scr" id="s0">
+      <div class="s0-hero"><div class="mcard" aria-hidden="true"><img src="assets/membership_card.png" alt=""><div class="cap"><span>SONOLIFE 420</span><span>TOSS MEMBER</span></div><i class="gloss"></i></div></div>
+      <h1 class="t">토스인증으로<br><span class="b">소노아임레디 다이렉트</span>를 진행해요</h1>
+      <ul class="flow">
+        <li class="cur"><i>1</i><div><b>본인 인증하기</b><p>토스 인증으로 간편하게 진행해요</p></div></li>
+        <li><i>2</i><div><b>구좌 선택하기</b><p>최대 3구좌까지 준비할 수 있어요</p></div></li>
+        <li><i>3</i><div><b>가입 정보 확인하기</b><p>계약서를 받으실 주소가 필요해요</p></div></li>
+        <li><i>4</i><div><b>결제 정보 등록 · 전자서명</b><p><em>월 1,000원부터</em> 시작해요</p></div></li>
+      </ul>
+    </section>
+
+    <section class="scr" id="s1">
+      <div class="s1h">
+        <h1 class="t" id="s1t"><b>본인확인</b>을 위해<br><b>이름</b>을 입력해주세요</h1>
+        <div class="mini"><div class="pw3d" aria-hidden="true"><img src="assets/tossbank/tb_phone.png" alt=""><i class="ckb"><svg><use href="#i-ck"/></svg></i></div></div>
+      </div>
+      <div class="pstack" id="stack">
+        <div class="pf act" id="fdName">
+          <label class="pk" for="iName">이름</label>
+          <div class="pin"><input id="iName" type="text" placeholder="이름 입력" inputmode="text" enterkeyhint="next" maxlength="12" autocomplete="off"><span class="ok"><svg><use href="#i-ck"/></svg></span></div>
+        </div>
+        <div class="pf" id="fdBirth" hidden>
+          <label class="pk" for="iBirth">생년월일 앞 6자리</label>
+          <div class="pin"><input id="iBirth" type="tel" placeholder="600315" inputmode="numeric" enterkeyhint="next" maxlength="6" autocomplete="off"><span class="ok"><svg><use href="#i-ck"/></svg></span></div>
+          <p class="perr">생년월일 6자리를 확인해 주세요</p>
+        </div>
+        <div class="pf" id="fdPhone" hidden>
+          <label class="pk" for="iPhone">휴대폰번호</label>
+          <div class="pin"><input id="iPhone" class="pre" type="tel" value="010-1234-1234" placeholder="010-1234-1234" inputmode="numeric" enterkeyhint="done" maxlength="13" autocomplete="off"><span class="ok"><svg><use href="#i-ck"/></svg></span></div>
+          <p class="perr">10자리 또는 11자리를 입력해 주세요</p>
+        </div>
+      </div>
+      <p class="hint">이름은 <b>다음</b>을 누르면, 생년월일·번호는 다 채우면 바로 넘어가요.</p>
+    </section>
+
+    <section class="scr" id="s2">
+      <div class="eyeb"><svg><use href="#i-ck"/></svg><span id="benefitName">고객님이 누릴 수 있는 혜택을 찾았어요</span></div>
+      <h1 class="t">몇 구좌로 준비할까요?</h1>
+      <p class="htags"><span>#크루즈·해외여행 등 전환</span><span>#가족·지인 자유롭게 양도</span></p>
+      <div class="seats" id="seats">
+        <button class="seat" data-n="1"><span class="sck"><svg><use href="#i-ck"/></svg></span><img src="assets/tossbank/tb_bust.png" alt=""><span class="n">1구좌</span><span class="p">월 1,000원</span></button>
+        <button class="seat" data-n="2"><span class="bdg">부부 추천</span><span class="sck"><svg><use href="#i-ck"/></svg></span><img src="assets/tossbank/tb_pair.png" alt=""><span class="n">2구좌</span><span class="p">월 2,000원</span></button>
+        <button class="seat" data-n="3"><span class="bdg">온가족 추천</span><span class="sck"><svg><use href="#i-ck"/></svg></span><img src="assets/tossbank/tb_family.png" alt=""><span class="n">3구좌</span><span class="p">월 3,000원</span></button>
+      </div>
+      <div class="sec">
+        <div class="lbl mid">누구를 위해 준비하세요? <span class="lsub">(여러 명 선택 가능)</span></div>
+        <div class="avs" id="who">
+          <button class="av" data-w="본인"><span class="ring"><img src="assets/tossbank/tb_flat_self.png" alt=""></span><span>본인</span></button>
+          <button class="av" data-w="배우자"><span class="ring"><img src="assets/tossbank/tb_flat_spouse.png" alt=""></span><span>배우자</span></button>
+          <button class="av" data-w="부모님"><span class="ring"><img src="assets/tossbank/tb_heart.png" alt=""></span><span>부모님</span></button>
+          <button class="av" data-w="자녀"><span class="ring"><img src="assets/tossbank/tb_flat_kid.png" alt=""></span><span>자녀</span></button>
+        </div>
+      </div>
+      <div class="tbl">
+        <div class="r hi"><span>첫 12개월 월 납입<small class="rsub" id="m2">13개월차부터 월 19,000원</small></span><em id="m1">1,000<u>원</u></em></div>
+        <div class="r tot"><span>만기축하금<small>(200회 완납 시)</small></span><em class="bl" id="m4">616,000<u>원</u></em></div>
+      </div>
+      <button class="ben" id="benBtn" aria-haspopup="dialog" aria-expanded="false"><img class="bic" src="assets/tossbank/tb_gift.png" alt=""><span class="lb">내 혜택 보기</span><svg><use href="#i-rt"/></svg></button>
+      <p class="oneline" id="notyet" style="margin-top:8px">아직 결제 단계가 아니에요.</p>
+    </section>
+
+    <section class="scr" id="s3">
+      <h1 class="t">계약에 필요한<br class="bk"> 정보를 확인해주세요</h1>
+      <div class="verified">
+        <span class="ck"><svg><use href="#i-ck"/></svg></span>
+        <span class="tx"><b id="v3name">고객님</b><span id="v3sub">1960.03.15 · 010-1234-1234</span></span>
+        <span class="st">확인완료</span>
+      </div>
+      <div class="fcard">
+      <div class="f"><div class="k">우편번호</div>
+        <div class="row2"><input class="inp" id="fZip" type="text" placeholder="검색으로 자동입력" readonly><button class="btn-s" id="zipBtn">주소 검색</button></div>
+      </div>
+      <div class="f"><div class="k">기본주소</div><input class="inp" id="fAddr1" type="text" placeholder="우편번호 검색 시 자동입력" readonly></div>
+      <div class="f"><div class="k">상세주소</div><input class="inp" id="fAddr2" type="text" placeholder="동·호수 등"></div>
+      <div class="f"><div class="k">이메일 <span style="font-weight:500;color:#6B7684">(선택 · 없으면 비워 두세요)</span></div>
+        <div class="mail">
+          <input class="inp" id="fMailId" type="text" placeholder="아이디" autocomplete="off">
+          <span class="at">@</span>
+          <input type="hidden" id="fMailDom" value="">
+          <button type="button" class="inp sel ph" id="fMailBtn" aria-haspopup="dialog"><span id="fMailLbl">선택</span></button>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="scr" id="s4">
+      <h1 class="t">결제 정보를<br class="bk"> 등록해주세요</h1>
+      <div class="pill"><span class="l"><b id="p4seat">2구좌 · 첫 12개월</b>13개월차부터 월 38,000원</span><span class="r" id="p4amt">월 2,000<u>원</u></span></div>
+      <div class="fcard">
+      <div class="pm" id="pm" role="group" aria-label="결제수단"><button type="button" class="on" data-m="card" aria-pressed="true">카드</button><button type="button" data-m="cms" aria-pressed="false">계좌 자동이체</button></div>
+      <div id="pmCard" class="f row2b">
+      <div class="fa"><div class="k">카드번호</div><input class="inp" id="fCard" type="tel" placeholder="0000 0000 0000 0000" inputmode="numeric" maxlength="19"></div>
+      <div class="fe"><div class="k">유효기간</div><input class="inp" id="fExp" type="tel" placeholder="MM/YY" inputmode="numeric" maxlength="5"></div>
+      </div>
+      <div id="pmCms" hidden>
+      <div class="f row2b"><div class="fb"><div class="k">은행</div><select class="inp" id="fBank" aria-label="은행 선택"><option value="">은행 선택</option><option>KB국민</option><option>신한</option><option>우리</option><option>하나</option><option>NH농협</option><option>IBK기업</option><option>카카오뱅크</option><option>토스뱅크</option><option>케이뱅크</option><option>SC제일</option><option>우체국</option><option>새마을금고</option><option>신협</option><option>수협</option><option>부산</option><option>대구</option><option>경남</option><option>광주</option><option>전북</option><option>제주</option><option>씨티</option></select></div><div class="fa"><div class="k">계좌번호</div><input class="inp" id="fAcct" type="tel" placeholder="계좌번호(숫자만)" inputmode="numeric" maxlength="20"></div></div>
+      </div>
+      <p class="hc" id="hcNote"></p>
+      <div class="f"><div class="k ic"><img src="assets/tossbank/tb_calendar.png" alt="">결제일</div>
+        <div class="days" id="days">
+          <button class="day" data-d="5">5일</button><button class="day on" data-d="10">10일</button><button class="day" data-d="15">15일</button><button class="day" data-d="20">20일</button><button class="day" data-d="25">25일</button>
+        </div>
+      </div>
+      <div class="agree">
+        <div class="row">
+          <button class="chk" id="ck4" aria-label="결제 약관 동의"><svg><use href="#i-ck"/></svg></button>
+          <p><b>[필수]</b> 결제 약관 및 1회차 납입금 결제 동의</p>
+          <button class="acc-btn rt tview" data-term="3" aria-label="결제 약관 보기">보기<svg><use href="#i-rt"/></svg></button>
+        </div>
+        <div class="row" id="ckCmsRow" hidden>
+          <button class="chk" id="ckCms" aria-label="자동이체 출금 동의"><svg><use href="#i-ck"/></svg></button>
+          <p><b>[필수]</b> 자동이체(CMS) 출금 동의</p>
+        </div>
+      </div>
+      </div>
+      <p class="safe"><svg><use href="#i-lock"/></svg>입력하신 정보는 안전하게 암호화해 처리해요</p>
+      <p class="safe cwd"><svg><use href="#i-ck"/></svg>계약서 받은 날부터 14일 이내 청약철회할 수 있어요</p>
+    </section>
+
+    <section class="scr" id="s5">
+      <div class="done-hero">
+        <div class="okwrap"><div class="okbig"><svg><use href="#i-ck"/></svg></div></div>
+        <h1>신청이 접수됐어요</h1>
+        <p>알림톡으로 온 계약서에 서명하면 가입이 완료돼요.</p>
+      </div>
+      <div class="tbl" style="margin-top:14px">
+        <div class="r"><span>신청번호</span><em id="d1">SL420-260907-001</em></div>
+        <div class="r"><span>가입 구좌</span><em id="d2">2구좌</em></div>
+        <div class="r"><span>첫 12개월 월 납입</span><em id="d3">월 2,000<u>원</u></em></div>
+        <div class="r"><span>첫 출금 예정일</span><em id="d4">다음 10일</em></div>
+      </div>
+      <div class="memb">
+        <div class="mcard" aria-hidden="true"><img src="assets/membership_card.png" alt=""><div class="cap"><span>SONOLIFE 420</span><span>TOSS MEMBER</span></div><i class="gloss"></i></div>
+        <p id="membTx"><b>1회차 결제 후</b> 소노아임레디 멤버십 혜택을 누릴 수 있어요</p>
+      </div>
+      <p class="hint" style="text-align:center">문의는 고객센터 1555-4118로 안내드려요.</p>
+    </section>
+  </main>
+
+  <div class="bb">
+    <button class="cta" id="mainCta">시작하기</button>
+    <button class="cta-sub" id="subCta">전화로 상담할래요 (1555-4118)</button>
+    <p class="fnote" id="fnote">상품 제공 (주)소노스테이션</p>
+  </div>
+
+  <div class="dim" id="termsDim">
+    <div class="sheet tsh" role="dialog" aria-label="약관 동의">
+      <div class="th"><h3>본인확인을 위해 약관 동의가 필요해요</h3><button class="ico" id="termsX" aria-label="닫기"><svg><use href="#i-x"/></svg></button></div>
+      <div class="allbox"><button class="allbtn" id="ckAll" aria-label="모두 동의하기"><span class="cb"><svg><use href="#i-ck"/></svg></span><span>모두 동의하기</span></button><button class="tg" id="tlistTg" aria-expanded="true" aria-label="약관 목록 접기"><svg><use href="#i-dn"/></svg></button></div>
+      <div class="tlist" id="tlist">
+        <div class="trow">
+          <button class="chk tm" data-t="1" data-req="1" aria-label="개인정보 수집·이용 및 제3자 제공 동의"><svg><use href="#i-ck"/></svg></button>
+          <p><em>(필수)</em> 개인정보 수집·이용 및 제3자 제공 동의</p>
+          <button class="acc-btn rt tview" data-term="1" aria-label="내용 보기"><svg><use href="#i-rt"/></svg></button>
+        </div>
+        <div class="trow">
+          <button class="chk tm" data-t="2" aria-label="혜택·안내 정보 수신 동의"><svg><use href="#i-ck"/></svg></button>
+          <p><em>(선택)</em> 혜택·안내 정보 수신 동의</p>
+          <button class="acc-btn rt tview" data-term="2" aria-label="내용 보기"><svg><use href="#i-rt"/></svg></button>
+        </div>
+      </div>
+      <button class="cta" id="termsOk" disabled>동의하고 토스 본인인증</button>
+    </div>
+  </div>
+
+  <div class="dim t2" id="termDim2">
+    <div class="sheet t2">
+      <div class="grab"></div>
+      <div class="th"><h3 id="t2Title">개인정보 수집·이용 및 제3자 제공</h3><button class="ico" id="t2X" aria-label="닫기"><svg><use href="#i-x"/></svg></button></div>
+      <p class="tsub" id="t2Sub" hidden>1회차 납입금 <b id="payAmt">2,000</b>원 · 이후 매월 결제일 자동 출금</p>
+      <div class="tb" id="t2Body"></div>
+      <button class="cta" id="t2Ok">확인</button>
+    </div>
+  </div>
+
+  <div class="dim" id="benDim">
+    <div class="sheet bs" role="dialog" aria-label="이 구좌로 받는 혜택">
+      <div class="grab"></div>
+      <h2 class="lft btl" id="benTitle">소노아임레디가 설계한 <br>토스 전용의 월등한 혜택의 상품입니다.</h2>
+      <div class="bsb">
+        <div class="brows">
+          <div class="br"><img src="assets/tossbank/tb_moneybag.png" alt=""><div><b>월 납입금</b><p>1~12회 월 1,000원<br>13~200회 월 19,000원</p></div><em>1,000원 시작</em></div>
+          <div class="br"><img src="assets/tossbank/tb_gift.png" alt=""><div><b>만기축하금</b><p>200회 완납 시</p></div><em class="bl">616,000원</em></div>
+          <div class="br mb"><img class="mc" src="assets/membership_card.png" alt=""><div><b>소노아임레디 멤버십</b><p>호텔·리조트·워터파크 통합 할인</p></div><em>1회차 결제 후</em></div>
+        </div>
+        <div class="bsel">
+          <div class="bsh"><b>구좌마다 용도에 맞게 써요</b><span class="bone">1구좌 기준</span></div>
+          <p class="bsd">크루즈·해외여행 등으로 전환하거나 가족·지인에게 양도할 수 있어요</p>
+          <div class="tks">
+            <div class="tk"><div class="hd"><i>택1</i></div><div class="bd"><strong>420만원</strong><b>라이프케어 서비스</b><p>상조·크루즈·여행 등<br><span class="l2">토스회원가로 이용</span></p></div></div>
+            <span class="tor" aria-hidden="true">or</span>
+            <div class="tk"><div class="hd"><i>택1</i></div><div class="bd"><strong>420만원</strong><b>만기 환급</b><p>200회 완납 후 안 쓰면<br><span class="l2">만기축하금 포함</span></p></div></div>
+          </div>
+        </div>
+      </div>
+      <button class="cta" id="benOk">확인</button>
+    </div>
+  </div>
+
+  <div class="dim" id="mailDim">
+    <div class="sheet msel" role="dialog" aria-label="이메일 도메인 선택">
+      <div class="grab"></div>
+      <h2 class="lft">이메일 도메인을 선택해 주세요</h2>
+      <div class="optl" id="mailOpts">
+        <button type="button" data-v="naver.com">naver.com<svg><use href="#i-ck"/></svg></button>
+        <button type="button" data-v="gmail.com">gmail.com<svg><use href="#i-ck"/></svg></button>
+        <button type="button" data-v="daum.net">daum.net<svg><use href="#i-ck"/></svg></button>
+        <button type="button" data-v="nate.com">nate.com<svg><use href="#i-ck"/></svg></button>
+        <button type="button" data-v="none"><span class="ot">이메일 없음<small>계약서는 알림톡으로 보내드려요</small></span><svg><use href="#i-ck"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="full ttl help" id="helpFull" role="dialog" aria-label="소복이 도움">
+    <div class="fhd"><button class="ico l" id="helpBack" aria-label="뒤로"><svg><use href="#i-back"/></svg></button><span>소복이</span><button class="txt" id="helpClose">닫기</button></div>
+    <div class="fbody hb" id="helpBody">
+      <div class="hgreet"><img src="assets/sobok/25_sobok_headset_128.png?v=50" alt=""><h2>고객님, 반가워요~<br>무엇이 궁금하신가요?</h2></div>
+      <div class="hchips" id="helpChips"></div>
+      <div class="hans" id="helpAns" hidden><p class="hq" id="helpQ"></p><div class="ha"><img src="assets/sobok/25_sobok_headset_128.png?v=50" alt=""><div class="hab"><div id="helpAnsTx" class="hatx"></div><a class="hcallbtn" id="helpCallBtn" href="tel:15554118" hidden>1555-4118 전화하기</a></div></div></div>
+    </div>
+    <form class="hinput" id="helpForm" autocomplete="off"><input id="helpIn" type="text" enterkeyhint="send" maxlength="60" placeholder="궁금한 내용을 입력해 주세요" aria-label="궁금한 내용 입력"><button type="submit" id="helpSend" aria-label="보내기"><svg viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg></button></form>
+  </div>
+
+  <div class="full ttl" id="tossTitle">
+    <div class="fhd"><span>토스인증</span><button class="ico" id="tossTitleX" aria-label="닫기"><svg><use href="#i-x"/></svg></button></div>
+    <div class="fbody">
+      <div class="pw3d big" aria-hidden="true"><img src="assets/tossbank/tb_phone.png" alt=""><i class="ckb"><svg><use href="#i-ck"/></svg></i></div>
+      <h2>휴대폰 번호로<br>본인인증을 진행해요</h2>
+      <div class="icard">
+        <div class="stack">
+          <div class="fld done"><div class="k">휴대폰 번호</div><div class="fin"><input id="tPhone" type="tel" readonly value="010-1234-1234"><span class="ok"><svg><use href="#i-ck"/></svg></span></div></div>
+          <div class="fld done"><div class="k">이름</div><div class="fin"><input id="tName" type="text" readonly value="김소노"><span class="ok"><svg><use href="#i-ck"/></svg></span></div></div>
+          <div class="fld done"><div class="k">생년월일</div><div class="fin"><input id="tBirth" type="text" readonly value="1960.03.15"><span class="ok"><svg><use href="#i-ck"/></svg></span></div></div>
+        </div>
+      </div>
+      <p class="hint">토스 앱으로 인증 요청을 보내요.<br>알림이 오면 토스 인증서로 확인해 주세요.</p>
+    </div>
+    <div class="fcta"><button class="cta" id="tossReq">인증 요청</button></div>
+  </div>
+
+  <div class="dim over" id="tossDim">
+    <div class="sheet">
+      <div class="grab"></div>
+      <div class="top">
+        <div class="pw3d big noti" aria-hidden="true"><img src="assets/tossbank/tb_phone.png" alt=""><i class="nb">1</i></div>
+        <h2>토스에서<br>인증을 진행해 주세요</h2>
+      </div>
+      <p class="desc">처음 이용 시, 토스 안내에 따라<br>인증서를 발급해 주세요.</p>
+      <button class="lnk" id="tossAgain">인증 다시 요청 <svg><use href="#i-rt"/></svg></button>
+      <button class="cta" id="tossOk" style="margin-top:2px">인증 완료</button>
+    </div>
+  </div>
+
+  <div class="full" id="tossFull">
+    <div class="okbig"><svg><use href="#i-ck"/></svg></div>
+    <h2>인증 완료</h2>
+    <p><b>다이렉트 페이지</b>로 이동해서<br>계속 진행해주세요</p>
+    <div class="arw"><svg><use href="#i-arw"/></svg></div>
+    <button class="cta" id="tossClose">닫기</button>
+  </div>
+
+  <div class="dim" id="promoDim">
+    <div class="sheet promo" role="dialog" aria-label="토스회원 전용 이벤트">
+      <div class="pvis" aria-hidden="true"><i class="glow"></i><div class="stk"><img class="c2" src="assets/tossbank/tb_party.png" alt=""><img class="c3" src="assets/tossbank/tb_point.png" alt=""><img class="c1" src="assets/tossbank/tb_gift.png" alt=""></div></div>
+      <span class="pchip">토스회원 전용 이벤트</span>
+      <h2 class="ptitle">가입하면<br>토스포인트 <em>5,000원</em> 드려요</h2>
+      <p class="psub">소노라이프420 다이렉트 가입 후<br> 1회차 출금이 확인되면 지급돼요</p>
+      <dl class="plist"><div><dt>기간</dt><dd>9/1(화) ~ 9/30(수)</dd></div><div><dt>대상</dt><dd>기간 내 1회차 출금 완료</dd></div><div><dt>지급</dt><dd>출금 확인 후 토스포인트</dd></div></dl>
+      <div class="pbtns"><button class="pb2" id="promoDay">오늘 하루 보지 않기</button><button class="cta" id="promoX">확인</button></div>
+    </div>
+  </div>
+
+  <div class="dim" id="exitDim">
+    <div class="sheet exit">
+      <div class="top"><img class="env" src="assets/sobok/19_sobok_closer.png" alt=""></div>
+      <h2>잠깐만요!</h2>
+      <p class="big">토스에서 선별된 인원에게만<br><b>특가 616,000원 할인</b> 적용이에요!</p>
+      <p class="small">토스 회원만 확인할 수 있는 혜택이에요.<br><span id="exitPre"><b>토스로 본인인증</b>하면 바로 확인할 수 있어요.</span><span id="exitPost" hidden>가입 완료 후 아래 혜택이 함께 지급돼요.</span></p>
+      <div class="ppw" id="exitPill" hidden><span class="ppill"><img src="assets/tossbank/tb_point.png" alt="">토스포인트 <b>5,000원</b> · 1회차 출금 확인 후 · 9/30 출금 기준</span></div>
+      <div class="btns"><button class="g" id="exitYes">네</button><button class="b" id="exitNo">이어서 하기</button></div>
+    </div>
+  </div>
+
+  <div class="dim" id="telDim">
+    <div class="sheet">
+      <div class="top">
+        <img class="hs" src="assets/sobok/25_sobok_headset.png?v=50" alt="">
+        <h2>전화가 편하시면<br>소복이가 도와드려요</h2>
+      </div>
+      <p class="desc">화면이 어려우시면 전화로 안내받으실 수 있어요.<br>지금 보신 내용 그대로 설명드릴게요.</p>
+      <p class="desc sub">가입은 화면에서 전자서명으로 진행돼요.</p>
+      <a class="telbtn line" href="tel:15554118"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>1555-4118</a>
+      <button class="telbtn go" id="telStay">화면으로 계속할게요</button>
+      <button class="txtbtn" id="telLeave">그냥 나갈게요</button>
+    </div>
+  </div>
+
+  <div class="load" id="load">
+    <img class="lmark" src="assets/bi_lockup_navy_v4.png" alt="소노아임레디">
+    <div class="bounce"><i></i><i></i><i></i></div>
+    <p id="loadTx">잠시만 기다려 주세요<span>정보를 확인하고 있어요</span></p>
+  </div>
+</div>
+
+<script src="./direct.faq.js"></script>
+<script src="./direct.hooks.js"></script>
+<script src="./direct.core.js"></script>
+</body>
+</html>
