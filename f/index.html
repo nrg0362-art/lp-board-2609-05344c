@@ -1765,6 +1765,11 @@ body.herocta-on .ask{opacity:0;pointer-events:none;transform:translate(-50%,20px
 .cmpq .cql i{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:#3182f6;color:#fff;font-style:normal;font-size:13px;font-weight:700;display:grid;place-items:center}
 .cmpq .cql b{font-size:15.5px;font-weight:700;color:#191f28;letter-spacing:-0.02em}
 .cmpq .cqf{color:var(--t5)}
+.cmp3 .subpwrap{display:grid}
+.cmp3 .subpwrap > .subp{grid-area:1/1;display:block!important;visibility:hidden;pointer-events:none;align-self:center}
+@media (min-width:360px){.cmpq .cql{grid-template-columns:1fr 1fr}.cmpq .cql li{padding:11px 12px}.cmpq .cql b{font-size:14.5px;word-break:keep-all}}
+.cmp3 .wrap:has(.tpanel.on[data-panel=c2]) .subpwrap > .subp[data-subp=c2],
+.cmp3 .wrap:has(.tpanel.on[data-panel=c1]) .subpwrap > .subp[data-subp=c1]{visibility:visible;pointer-events:auto}
 .crows.c7 li a,.crows.c7 li button{min-width:0}
 .crows.c7 .ct{min-width:0;flex:1 1 auto}
 .crows.c7 .ct b,.crows.c7 .ct small{display:block;min-width:0;word-break:keep-all;overflow-wrap:anywhere}
@@ -2484,8 +2489,8 @@ body.herocta-on .ask{opacity:0;pointer-events:none;transform:translate(-50%,20px
   <div class="wrap" data-tabs>
     <p class="axis">비교해 보세요</p>
     <h2 class="g">두 가지 조건을<br>나란히 놓고 보세요</h2>
-    <p class="def d8 subp" data-subp="c2">장례 당일엔 경황없이 정할 것이 많고, <span class="nw">인원·용품이 더해지며</span> <span class="nw">비용이 달라지기 쉬워요.</span><br><b>미리 정해 둔 기준이 있어야 <span class="nw">그날 비교할 수 있어요.</span></b></p><div class="def d8 subp cmpq" data-subp="c1"><p class="cq">상조 가입을 고민 중이라면 <span class="nw">두 가지만 견줘 보세요.</span></p><ul class="cql"><li><i>1</i><b>실납입 대비 만기 수령액</b></li><li><i>2</i><b>중도 이용 시 정산 방식</b></li></ul><p class="cqf">소노라이프420은 <span class="nw">두 경우 모두</span> <span class="nw"><b>616,000원 혜택</b>이 적용돼요.</span></p></div>
-    <div class="tseg tseg6" role="tablist" style="margin-top:22px"><button type="button" class="on" data-tab="c2" role="tab" aria-selected="true"><img src="assets/ic/document.png" alt="" width="26" height="26">장례 준비 비교</button><button type="button" data-tab="c1" role="tab" aria-selected="false"><img src="assets/ic/coincard.png" alt="" width="26" height="26">상조 상품 비교</button></div>
+    <div class="subpwrap"><p class="def d8 subp" data-subp="c2">장례 당일엔 경황없이 정할 것이 많고, <span class="nw">인원·용품이 더해지며</span> <span class="nw">비용이 달라지기 쉬워요.</span><br><b>미리 정해 둔 기준이 있어야 <span class="nw">그날 비교할 수 있어요.</span></b></p><div class="def d8 subp cmpq" data-subp="c1"><p class="cq">상조를 <span class="nw">꼼꼼히 비교하는 중이라면,</span> <span class="nw">이 두 가지만 보세요.</span></p><ul class="cql"><li><i>1</i><b>실납입 대비 만기 수령액</b></li><li><i>2</i><b>중도 이용 시 정산 방식</b></li></ul><p class="cqf">소노라이프420은 <span class="nw">두 경우 모두</span> <span class="nw"><b>616,000원 혜택</b>이 적용돼요.</span></p></div>
+    </div><div class="tseg tseg6" role="tablist" style="margin-top:22px"><button type="button" class="on" data-tab="c2" role="tab" aria-selected="true"><img src="assets/ic/document.png" alt="" width="26" height="26">장례 준비 비교</button><button type="button" data-tab="c1" role="tab" aria-selected="false"><img src="assets/ic/coincard.png" alt="" width="26" height="26">상조 상품 비교</button></div>
     <div class="tpanel on" data-panel="c2">
       <div class="cx6w">
         <table class="cx6 c7" aria-label="장례식장에서 그날 결정과 미리 정한 소노라이프420 비교">
@@ -2631,14 +2636,14 @@ body.herocta-on .ask{opacity:0;pointer-events:none;transform:translate(-50%,20px
         <button type="button" class="rlink" id="rLink"></button>
         <div class="agall"><label class="agree agtop"><input type="checkbox" id="agAll"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">약관에 모두 동의해요</span></label><button type="button" class="agtg" id="agTg" aria-expanded="false" aria-label="약관 자세히 보기"><svg viewBox="0 0 20 20" fill="none" stroke="#8b95a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l5 5 5-5"/></svg></button></div><div class="agpanel" id="agPanel" hidden><label class="agree" style="margin-top:6px"><input type="checkbox" id="agReq"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[필수] 개인정보 수집·이용 동의</span></label>
         <label class="agree" style="margin-top:12px"><input type="checkbox" id="agReq2"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[필수] 개인정보 제3자 제공 동의</span></label>
-            <label class="agree" style="margin-top:12px"><input type="checkbox" id="agOpt"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[선택] 혜택·안내 정보 받기<small>판매대행 비즈이노(주)에서 알림톡·문자·전화로 안내</small></span></label>
+            <label class="agree" style="margin-top:12px"><input type="checkbox" id="agOpt"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[선택] 혜택·안내 정보 수신 동의<small>소노라이프420 가입상담센터 운영 · 판매 비즈이노(주) | 상품 제공·계약 (주)소노스테이션</small></span></label>
         <details class="agmore">
         <summary>약관 전문 보기</summary>
           <div class="agbody">
-            <p class="agtxt"><b>[필수] 수집·이용</b> 수집·이용 주체 비즈이노(주)(소노아임레디 공식총판·판매대행) / 항목 이름·휴대폰번호·생년월일·성별·내외국인 여부·CI / 목적 본인확인 및 소노라이프420 가입 신청 절차 진행 / 보유 가입 미완료 시 최대 90일, 목적 달성 시 파기 / <b>처리 위탁</b> (주)링크허브(바로써트) 본인확인 중계</p>
+            <p class="agtxt"><b>[필수] 수집·이용</b> 수집·이용 주체 비즈이노(주)(소노라이프420 가입상담센터 운영·판매대행) / 항목 이름·휴대폰번호·생년월일·성별·내외국인 여부·CI / 목적 본인확인 및 소노라이프420 가입 신청 절차 진행 / 보유 가입 미완료 시 최대 90일, 목적 달성 시 파기 / <b>처리 위탁</b> (주)링크허브(바로써트) 본인확인 중계</p>
             <p class="agtxt"><b>[필수] 제3자 제공</b> 받는 자 (주)소노스테이션 / 목적 상조 계약 체결·이행 / 항목 이름·휴대폰번호·생년월일·성별·CI / 보유 계약 종료 후 관계 법령에서 정한 기간</p>
             <p class="agtxt">동의를 거부할 수 있으며, 거부 시 다이렉트 가입 신청이 제한돼요.</p>
-            <p class="agtxt"><b>[선택] 혜택·안내 정보 수신</b> 받는 자 비즈이노(주)(소노아임레디 공식총판·판매대행) / 목적 상품·혜택 안내 / 항목 이름·휴대폰번호 / 보유 동의 철회 시까지. 선택 항목이라 동의하지 않아도 가입 신청과 심사에 불이익이 없어요. 수신 거부는 받은 메시지 내 안내로 언제든 가능해요.</p>
+            <p class="agtxt"><b>[선택] 혜택·안내 정보 수신</b> 수신자 비즈이노(주)(소노라이프420 가입상담센터 운영·판매대행, 계약 체결 주체는 (주)소노스테이션) / 목적 가입 상담 및 상품·혜택 안내 / 항목 이름·휴대폰번호 / 방법 알림톡·문자·전화·이메일 / 보유 동의 철회 시까지 / 동의를 거부해도 가입 신청·심사에 불이익이 없으며, 이미 공지된 혜택의 지급 조건에도 영향이 없습니다. 다만 미동의 시 프로모션·사은 혜택 안내를 받지 못할 수 있습니다. 수신 거부는 수신 메시지 내 안내로 언제든 가능합니다.</p>
           </div>
         </details>
         </div>
