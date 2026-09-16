@@ -1765,6 +1765,7 @@ body.herocta-on .ask{opacity:0;pointer-events:none;transform:translate(-50%,20px
 .cmpq .cql i{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:#3182f6;color:#fff;font-style:normal;font-size:13px;font-weight:700;display:grid;place-items:center}
 .cmpq .cql b{font-size:15.5px;font-weight:700;color:#191f28;letter-spacing:-0.02em}
 .cmpq .cqf{color:var(--t5)}
+.agnote{margin-top:12px;font-size:12.5px;line-height:1.55;color:var(--muted);letter-spacing:-0.01em}
 .cmp3 .subpwrap{display:grid}
 .cmp3 .subpwrap > .subp{grid-area:1/1;display:block!important;visibility:hidden;pointer-events:none;align-self:center}
 @media (min-width:360px){.cmpq .cql{grid-template-columns:1fr 1fr}.cmpq .cql li{padding:11px 12px}.cmpq .cql b{font-size:14.5px;word-break:keep-all}}
@@ -2635,15 +2636,15 @@ body.herocta-on .ask{opacity:0;pointer-events:none;transform:translate(-50%,20px
         <p class="rnote" id="rNote"></p>
         <button type="button" class="rlink" id="rLink"></button>
         <div class="agall"><label class="agree agtop"><input type="checkbox" id="agAll"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">약관에 모두 동의해요</span></label><button type="button" class="agtg" id="agTg" aria-expanded="false" aria-label="약관 자세히 보기"><svg viewBox="0 0 20 20" fill="none" stroke="#8b95a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l5 5 5-5"/></svg></button></div><div class="agpanel" id="agPanel" hidden><label class="agree" style="margin-top:6px"><input type="checkbox" id="agReq"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[필수] 개인정보 수집·이용 동의</span></label>
-        <label class="agree" style="margin-top:12px"><input type="checkbox" id="agReq2"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[필수] 개인정보 제3자 제공 동의</span></label>
-            <label class="agree" style="margin-top:12px"><input type="checkbox" id="agOpt"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[선택] 혜택·안내 정보 수신 동의</span></label>
+        <label class="agree" style="margin-top:12px"><input type="checkbox" id="agReq2"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[필수] 개인정보 제3자 제공 동의<small>받는 자 (주)소노스테이션</small></span></label>
+            <label class="agree" style="margin-top:12px"><input type="checkbox" id="agOpt"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span class="at">[선택] 혜택·안내 정보 수신 동의<small>(주)비즈이노가 보내드려요</small></span></label>
+        <p class="agnote">동의를 거부할 수 있어요. 다만 필수 항목에 동의하지 않으면 가입 신청이 제한돼요.</p>
         <details class="agmore">
         <summary>약관 전문 보기</summary>
           <div class="agbody">
             <p class="agtxt"><b>[필수] 수집·이용</b> 수집·이용 주체 (주)비즈이노(소노라이프420 가입상담센터 운영·판매대행) / 항목 이름·휴대폰번호·생년월일·성별·내외국인 여부·CI / 목적 본인확인 및 소노라이프420 가입 신청 절차 진행 / 보유 가입 미완료 시 최대 90일, 목적 달성 시 파기 / <b>처리 위탁</b> (주)링크허브(바로써트) 본인확인 중계</p>
             <p class="agtxt"><b>[필수] 제3자 제공</b> 받는 자 (주)소노스테이션 / 목적 상조 계약 체결·이행 / 항목 이름·휴대폰번호·생년월일·성별·CI / 보유 계약 종료 후 관계 법령에서 정한 기간</p>
-            <p class="agtxt">동의를 거부할 수 있으며, 거부 시 다이렉트 가입 신청이 제한돼요.</p>
-            <p class="agtxt"><b>[선택] 혜택·안내 정보 수신</b> 수신자 (주)비즈이노(소노라이프420 가입상담센터 운영·판매대행, 계약 체결 주체는 (주)소노스테이션) / 목적 가입 상담 및 상품·혜택 안내 / 항목 이름·휴대폰번호 / 방법 알림톡·문자·전화·이메일 / 보유 동의 철회 시까지 / 동의를 거부해도 가입 신청·심사에 불이익이 없으며, 이미 공지된 혜택의 지급 조건에도 영향이 없습니다. 다만 미동의 시 프로모션·사은 혜택 안내를 받지 못할 수 있습니다. 수신 거부는 수신 메시지 내 안내로 언제든 가능합니다.</p>
+                        <p class="agtxt"><b>[선택] 혜택·안내 정보 수신</b> 수신자 (주)비즈이노(소노라이프420 가입상담센터 운영·판매대행, 계약 체결 주체는 (주)소노스테이션) / 목적 가입 상담 및 상품·혜택 안내 / 항목 이름·휴대폰번호 / 방법 알림톡·문자·전화·이메일 / 보유 동의 철회 시까지 / 동의를 거부해도 가입 신청·심사에 불이익이 없으며, 이미 공지된 혜택의 지급 조건에도 영향이 없습니다. 다만 미동의 시 프로모션·사은 혜택 안내를 받지 못할 수 있습니다. 수신 거부는 수신 메시지 내 안내로 언제든 가능합니다.</p>
           </div>
         </details>
         </div>
