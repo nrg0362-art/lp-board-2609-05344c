@@ -1079,6 +1079,20 @@ body.qsheet-open{overflow:hidden}
 @media (min-width:768px){.pick5{grid-template-columns:1fr 1fr}}
 .promise .pn{font-size:15px;font-weight:600;color:#333d4b}
 .js5{display:grid;gap:44px;margin-top:26px}
+@media (max-width:767px){
+  .js5.jstack{gap:0;margin-top:20px}
+  .js5.jstack > li{position:sticky;top:76px;background:#fff;border-radius:24px;padding:14px 14px 20px;box-shadow:0 -1px 0 #eef1f5,0 12px 28px rgba(2,32,71,.10);transform:scale(var(--js, 1));transform-origin:top center;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s}
+  .js5.jstack > li + li{margin-top:18px}
+  .js5.jstack > li:nth-child(1){z-index:1}
+  .js5.jstack > li:nth-child(2){z-index:2}
+  .js5.jstack > li:nth-child(3){z-index:3}
+  .js5.jstack > li.jdim{--js:.94;opacity:.55}
+  .js5.jstack .jpanel{height:250px}
+  .js5.jstack .jpanel img,.js5.jstack .jpanel .phw{width:206px!important;margin-top:18px}
+  .js5.jstack h3{font-size:19px}
+  .js5.jstack .jd{font-size:14.5px}
+  .js5.jstack .jtags{margin-top:10px}
+}
 .jpanel{height:300px;border-radius:24px;overflow:hidden;display:flex;justify-content:center;background:linear-gradient(180deg,#cfe3ff 0,#eaf3ff 70%,#f4f8ff 100.0%)}
 .js5 li:nth-child(2) .jpanel{background:linear-gradient(180deg,#e7eefc 0,#f2f6fd 70%,#f7f9fd 100.0%)}
 .js5 li:nth-child(3) .jpanel{background:linear-gradient(180deg,#fbeee4 0,#fdf5ef 70%,#fdf8f4 100.0%)}
@@ -1790,7 +1804,13 @@ body.agsheet-open{overflow:hidden}
 .agrows li p small{display:block;margin-top:2px;font-size:12px;color:#8b95a1}
 .agview{flex:0 0 28px;width:28px;height:28px;display:grid;place-items:center}
 .agsheet .fbtn{margin-top:16px}
-.agsheet.ag2 .ag2body{margin-top:10px;font-size:14px;line-height:1.7;color:#4e5968;letter-spacing:-0.01em}
+.agsheet.ag2{max-height:86vh;display:flex;flex-direction:column}
+.agsheet.ag2 .ag2body{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;margin-top:10px;padding-right:2px;font-size:14px;line-height:1.7;color:#4e5968;letter-spacing:-0.01em}
+.agsheet.ag2 .ag2body h4{margin:16px 0 4px;font-size:15px;font-weight:700;color:#191f28}
+.agsheet.ag2 .ag2body ul{margin:4px 0 0 18px}
+.agsheet.ag2 .ag2body li{margin-top:3px}
+.agsheet.ag2 .ag2body p+p{margin-top:8px}
+.agsheet.ag2 .fbtn{flex:none}
 .agdim.ag2{z-index:13100}
 .rst9{margin-top:12px;background:#fff;border-radius:16px;padding:2px 14px;box-shadow:inset 0 0 0 1px #eef1f5}
 .rst9 .r9{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
@@ -2426,7 +2446,7 @@ body.flow-open .resumebar,body.qsheet-open .resumebar{display:none}
   <div class="wrap">
     <p class="axis">토스 회원 전용 채널</p>
     <h2 class="g">관심부터 가입까지<br>자연스럽게 이어져요</h2>
-    <ol class="js5">
+    <ol class="js5 jstack">
       <li>
         <div class="jpanel"><div class="phw"><img src="img/mock_step1.png" alt="토스 혜택 탭의 소노아임레디 광고 예시" width="300" height="593" loading="lazy" decoding="async"><span class="clk" id="mockClock" aria-hidden="true">9:41</span></div></div>
         <p class="jb">토스 회원 전용 채널</p>
@@ -2618,7 +2638,7 @@ body.flow-open .resumebar,body.qsheet-open .resumebar{display:none}
     <i class="handle" aria-hidden="true"></i>
     <div class="agh"><p id="ag2Title">약관 전문</p><button type="button" id="ag2Close" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="#191f28" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     <div class="ag2body" id="ag2Body"></div>
-    <button type="button" class="fbtn" id="ag2Ok">확인</button>
+    <button type="button" class="fbtn" id="ag2Ok">동의하기</button>
   </div>
 </div>
 <div class="qsheet" id="qsheet" hidden role="dialog" aria-modal="true" aria-labelledby="qTitle">
@@ -3898,9 +3918,9 @@ body.flow-open .resumebar,body.qsheet-open .resumebar{display:none}
   window.__agState=function(){ return {req:st.req,req2:st.req2,opt:st.opt}; };
   var st={req:false,req2:false,opt:false};
   var TERMS={
-    req:["[필수] 개인정보 수집·이용","수집·이용 주체 (주)비즈이노(소노라이프420 가입상담센터 운영·판매대행)<br>항목 이름·휴대폰번호·생년월일·성별·내외국인 여부·CI<br>목적 본인확인 및 소노라이프420 가입 신청 절차 진행<br>보유 가입 미완료 시 최대 90일, 목적 달성 시 파기<br>처리 위탁 (주)링크허브(바로써트) 본인확인 중계<br><br>동의를 거부할 수 있어요. 다만 동의하지 않으면 가입 신청이 제한돼요."],
-    req2:["[필수] 개인정보 제3자 제공","받는 자 (주)소노스테이션<br>목적 상조 계약 체결·이행<br>항목 이름·휴대폰번호·생년월일·성별·CI<br>보유 계약 종료 후 관계 법령에서 정한 기간<br><br>동의를 거부할 수 있어요. 다만 동의하지 않으면 가입 신청이 제한돼요."],
-    opt:["[선택] 광고성 정보 수신 (문자·전화·이메일)","보내는 곳 (주)비즈이노(소노라이프420 가입상담센터 운영·판매대행, 계약 체결 주체는 (주)소노스테이션)<br>목적 가입 상담 및 상품·혜택 안내<br>항목 이름·휴대폰번호<br>방법 알림톡·문자·전화·이메일<br>보유 동의 철회 시까지<br><br>동의를 거부해도 가입 신청·심사에 불이익이 없으며, 이미 공지된 혜택의 지급 조건에도 영향이 없어요. 다만 미동의 시 프로모션·사은 혜택 안내를 받지 못할 수 있어요. 수신 거부는 수신 메시지 내 안내로 언제든 가능해요."]
+    req:{t:'[필수] 개인정보 수집·이용 동의', h:'<p>주식회사 비즈이노(이하 "회사")는 소노라이프420 상조 가입 신청 서비스 제공을 위하여 아래와 같이 개인정보를 처리합니다.</p><h4>1. 수집하는 개인정보 항목</h4><ul><li>본인인증(통합인증): 이름, 휴대전화번호, 생년월일, 성별, 내외국인 구분, CI(연계정보)</li><li>가입 신청: 이메일, 주소, 결제수단 정보(계좌·카드는 가입 처리 외 저장하지 않음)</li></ul><h4>2. 수집 방법</h4><ul><li>본인확인 중계 서비스(바로써트 / (주)링크허브)를 통해 토스(비바리퍼블리카) 본인확인으로 수집 — 이용자가 토스 인증으로 본인 확인</li><li>가입 신청 화면에서 이용자가 직접 입력</li></ul><h4>3. 이용 목적</h4><ul><li>소노라이프420 상조 상품 가입 신청 접수 및 본인 확인</li><li>CI(연계정보)를 통한 회원 식별·중복가입 확인 및 가입 이력 관리</li><li>가입 처리·상담·민원 응대, 부정 가입 방지</li></ul><h4>4. 제3자 제공</h4><ul><li>제공받는 자: (주)소노스테이션</li><li>제공 항목: 이름, 휴대전화번호, 생년월일, 성별, CI 등 가입 처리에 필요한 정보</li><li>제공 목적: 소노라이프420 상조 계약 체결·이행(전자청약·결제·증서 발송)</li></ul><h4>5. 처리 위탁</h4><ul><li>(주)링크허브(바로써트): 본인확인 서비스 중계(토스 인증 연계, CI 발급·전달)</li><li>(주)효성ITX: 소노라이프420 상품 소개, 가입 상담, 계약 체결 지원</li><li>회사는 (주)소노스테이션의 회원등록 모집·유지·관리 업무를 위탁받아 처리합니다.</li><li>상담 명단을 제공받는 수탁업체((주)효성ITX)에는 이름·연락처만 제공하며, CI는 제공하지 않습니다.</li></ul><h4>6. 보유 및 이용 기간</h4><ul><li>CI(연계정보) 및 가입 고객정보: 회원 식별·중복가입 확인 및 (주)소노스테이션 가입 연계 목적으로 회사의 고객관리시스템(CRM)에 암호화하여 보관합니다.</li><li>가입이 완료되지 않은 신청 정보(본인확인 정보 포함): 수집·이용 동의일로부터 최대 90일. 그 전에 수집·이용 목적이 달성되거나 동의가 철회되면 지체 없이 파기합니다.</li><li>가입이 완료된 고객정보: 계약 이행 기간 및 관계 법령(전자상거래법·할부거래법 등)에 따른 보존기간 동안 보관합니다.</li><li>다른 법령에 따라 보존해야 하는 정보는 해당 항목을 법정기간 동안 분리 보관한 후 파기합니다.</li><li>CI는 회원 식별 용도로만 이용하며, 그 외의 목적으로 저장·활용하지 않습니다. (정보통신망법 제23조의6)</li></ul><h4>7. 이용자 권리</h4><p>이용자는 개인정보 열람·정정·삭제·처리정지를 요청할 수 있으며, 수집·이용 동의를 거부할 권리가 있습니다. (거부 시 가입 신청이 제한될 수 있습니다.)</p><h4>8. 사업자 정보</h4><p>주식회사 비즈이노 | 대표 조철석 | 사업자등록번호 824-86-02238<br>서울특별시 강남구 테헤란로 313, 제1동 제9층 제9호(역삼동, 성지하이츠1)<br>상품 제공: (주)소노스테이션 | 판매: 주식회사 비즈이노</p>'},
+    req2:{t:'[필수] 개인정보 제3자 제공 동의', h:'<p>주식회사 비즈이노(이하 "회사")는 소노라이프420 상조 계약 체결·이행을 위하여 아래와 같이 개인정보를 제3자에게 제공합니다.</p><h4>1. 제공받는 자</h4><ul><li>(주)소노스테이션 (소노라이프420 상품 제공·계약 주체)</li></ul><h4>2. 제공 항목</h4><ul><li>이름, 휴대전화번호, 생년월일, 성별, CI(연계정보) 등 가입 처리에 필요한 정보</li></ul><h4>3. 제공 목적</h4><ul><li>소노라이프420 상조 계약 체결·이행(전자청약·결제·증서 발송)</li><li>가입 이력 관리 및 계약 관련 안내</li></ul><h4>4. 보유·이용 기간</h4><ul><li>계약 종료 후 관계 법령(전자상거래법·할부거래법 등)에서 정한 기간</li><li>보존 의무가 없는 정보는 목적 달성 시 지체 없이 파기</li></ul><h4>5. 동의 거부 권리</h4><p>이용자는 제3자 제공 동의를 거부할 수 있습니다. 다만 동의하지 않으면 소노라이프420 가입 신청이 제한됩니다.</p><h4>6. 사업자 정보</h4><p>주식회사 비즈이노 | 대표 조철석 | 사업자등록번호 824-86-02238<br>서울특별시 강남구 테헤란로 313, 제1동 제9층 제9호(역삼동, 성지하이츠1)<br>상품 제공: (주)소노스테이션 | 판매: 주식회사 비즈이노</p>'},
+    opt:{t:'[선택] 혜택·안내 정보 수신 동의', h:'<p>주식회사 비즈이노(이하 "회사")는 「개인정보 보호법」 및 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」에 따라, 고객님께 소노라이프420 및 소노아임레디 관련 혜택·이벤트·안내를 제공하기 위해 아래와 같이 개인정보를 수집·이용하고자 합니다.</p><h4>1. 수집·이용 목적</h4><ul><li>소노라이프420·소노아임레디 상품·혜택·이벤트·기획전 안내</li><li>가입 상담 및 만족도 조사, 멤버십 혜택 안내</li><li>카카오 알림톡·문자·전화·이메일을 통한 마케팅 정보 발송</li></ul><h4>2. 수집 항목</h4><p>성명, 생년월일, 연락처(휴대전화), 이메일, 가입·상담 이력</p><h4>3. 보유·이용 기간</h4><p>동의일로부터 2년 (동의 철회 또는 목적 달성 시 지체 없이 파기)</p><h4>4. 안내 수단</h4><p>카카오 알림톡, 문자(SMS·LMS), 전화, 이메일</p><h4>5. 동의 거부 권리 및 철회</h4><ul><li>본 동의는 선택 사항이며, 동의하지 않으셔도 소노라이프420 가입(계약)에는 제한이 없습니다.</li><li>동의 후에도 고객센터(1555-4118) 또는 수신 메시지 내 수신거부를 통해 언제든지 철회할 수 있습니다.</li></ul><p>※ 본 동의를 거부하는 경우, 혜택·이벤트 등 상품소개 및 가입상담 안내 서비스 제공이 제한됩니다.</p>'}
   };
   function paint(){
     rows.forEach(function(b){ var k=b.getAttribute("data-ag"); b.classList.toggle("on",st[k]); b.setAttribute("aria-pressed",String(st[k])); });
@@ -3911,9 +3931,10 @@ body.flow-open .resumebar,body.qsheet-open .resumebar{display:none}
   paint();
   allBtn.addEventListener("click",function(){ var on=!(st.req&&st.req2&&st.opt); st.req=st.req2=st.opt=on; paint(); });
   rows.forEach(function(b){ b.addEventListener("click",function(){ var k=b.getAttribute("data-ag"); st[k]=!st[k]; paint(); }); });
-  document.querySelectorAll(".agbox .agview").forEach(function(b){ b.addEventListener("click",function(){ var d=TERMS[b.getAttribute("data-term")]; t2.textContent=d[0]; body.innerHTML=d[1]; dim2.hidden=false; }); });
+  var curTerm=null;
+  document.querySelectorAll(".agbox .agview").forEach(function(b){ b.addEventListener("click",function(){ curTerm=b.getAttribute("data-term"); var d=TERMS[curTerm]; t2.textContent=d.t; body.innerHTML=d.h; body.scrollTop=0; dim2.hidden=false; }); });
   document.getElementById("ag2Close").addEventListener("click",function(){ dim2.hidden=true; });
-  document.getElementById("ag2Ok").addEventListener("click",function(){ dim2.hidden=true; });
+  document.getElementById("ag2Ok").addEventListener("click",function(){ if(curTerm){ st[curTerm]=true; paint(); } dim2.hidden=true; });
   dim2.addEventListener("click",function(e){ if(e.target===dim2) dim2.hidden=true; });
   window.__agSubmit=function(){
     if(!(st.req&&st.req2)){
@@ -3943,6 +3964,21 @@ body.flow-open .resumebar,body.qsheet-open .resumebar{display:none}
     bar.hidden=true;
     var op=document.querySelector("[data-flow-open]"); if(op) op.click();
   });
+})();
+</script>
+<script>
+(function(){
+  var ol=document.querySelector(".js5.jstack"); if(!ol||!("IntersectionObserver" in window)) return;
+  var items=[].slice.call(ol.children);   // 직계 li만
+  if(window.matchMedia("(min-width:768px)").matches) return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var i=items.indexOf(e.target);
+      if(i<0) return;
+      items.forEach(function(el,k){ el.classList.toggle("jdim", k<i && e.isIntersecting); });
+    });
+  },{rootMargin:"-45% 0px -45% 0px",threshold:0});
+  items.forEach(function(el){ io.observe(el); });
 })();
 </script>
 </body>
